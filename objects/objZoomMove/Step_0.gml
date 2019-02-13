@@ -10,7 +10,9 @@ if (point_in_rectangle(mouse_x, mouse_y, x - 48, y - 48, x + 48, y + 48) &&
 	global.zoomLevel = 1;
 }
 
-if (canMove)
+if (canMove && point_in_rectangle(mouse_x, mouse_y,
+			global.mapX, global.mapY,
+			global.mapX + 800, global.mapY + 608))
 {
 	objZoomPos.x = mouse_x;
 	objZoomPos.y = mouse_y;

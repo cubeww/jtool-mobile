@@ -6,6 +6,19 @@
 #macro GLOBALSTATE_PLAY 1	// 测试状态
 #macro GLOBALSTATE_INPUT 2	// 输入状态
 
+// 枚举
+enum PAGE 
+{
+	FILE = 0,
+	PLAYER = 1,
+	MAP = 2,
+	ABOUT = 3,
+	WORLD = 4,
+	BLOCK = 5,
+	KILLER = 6,
+	MISC = 7
+}
+
 // 定义全局变量
 room_speed = 50; // 正常I Wanna的帧数（50FPS/s）
 global.state = GLOBALSTATE_EDIT; // 全局模式，防止误触

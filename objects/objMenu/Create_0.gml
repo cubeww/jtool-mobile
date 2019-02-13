@@ -6,11 +6,5 @@ efY = 0;
 efW = 0;
 efH = 0;
 
-enum PAGE 
-{
-	FILE = 0,
-	PLAYER = 1,
-	MAP = 2,
-	ABOUT = 3
-}
 page = PAGE.FILE;
+_menuButtonEffect(x, 56, 32, 32);
