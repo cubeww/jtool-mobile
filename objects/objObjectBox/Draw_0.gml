@@ -14,29 +14,57 @@ if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuWorld))
 {	
 	// 世界
 	_menuButtonEffect(xx + yp * i, yy, iconW, iconH);
-	page = PAGE.WORLD;
+	page = OPAGE.WORLD;
 }
 i++;
 if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuBlock))
 {
 	// 砖
 	_menuButtonEffect(xx + yp * i, yy, iconW, iconH);
-	page = PAGE.BLOCK;
+	page = OPAGE.BLOCK;
 }
 i++;
 if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuKiller))
 {
 	// 杀人
 	_menuButtonEffect(xx + yp * i, yy, iconW, iconH);
-	page = PAGE.KILLER;
+	page = OPAGE.KILLER;
 }
 i++;
 if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuMisc))
 {
 	// 其它
 	_menuButtonEffect(xx + yp * i, yy, iconW, iconH);
-	page = PAGE.MISC;
+	page = OPAGE.MISC;
 }
 #endregion
+#region 绘制各个对象
+var maxW = 4; // 一行最多存在
+var maxH = 4; // 最多存在几行
+var xb = 48; // 水平间隔
+var yb = 48; // 垂直间隔
+var ww = 48; // 宽度
+var hh = 48; // 高度
+var xs = xx; // 开始X
+var ys = yy + 64; // 开始Y
+for (var i = 0, count = 0; i < maxH; i++)
+{
+	for (var j = 0; j < maxW; j++)
+	{
+		if (obj[page, count] != -1) // 该位置存在对象
+		{
+			var dx = xs + j * xb;
+			var dy = ys + i * yb;
+			var dobj = obj[page, count];
+			scrObjectButton(dx, dy, ww, hh, object_get_sprite(dobj));
+			count++;
+		}
+		else break;
+	}
+}
 
+#endregion
+
+
+// 按钮特效
 event_user(0);

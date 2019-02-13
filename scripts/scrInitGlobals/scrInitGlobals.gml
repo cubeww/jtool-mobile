@@ -13,12 +13,14 @@ enum PAGE
 	PLAYER = 1,
 	MAP = 2,
 	ABOUT = 3,
-	WORLD = 4,
-	BLOCK = 5,
-	KILLER = 6,
-	MISC = 7
 }
-
+enum OPAGE
+{
+	WORLD = 0,
+	BLOCK = 1,
+	KILLER = 2,
+	MISC = 3
+}
 // 定义全局变量
 room_speed = 50; // 正常I Wanna的帧数（50FPS/s）
 global.state = GLOBALSTATE_EDIT; // 全局模式，防止误触
