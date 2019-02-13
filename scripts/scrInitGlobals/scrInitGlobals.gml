@@ -9,3 +9,4 @@
 // 定义全局变量
 room_speed = 50; // 正常I Wanna的帧数（50FPS/s）
 global.state = GLOBALSTATE_EDIT; // 全局模式，防止误触
+global.mapName = "Untitled"; // 地图名字

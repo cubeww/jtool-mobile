@@ -87,6 +87,22 @@
             }
         },
         {
+            "Key": "2e3faebe-fdc4-414c-a4bb-fff39e0b7177",
+            "Value": {
+                "id": "a04aafec-75c8-4ab7-b2da-faf9404530f5",
+                "resourcePath": "scripts\\scrMenuButtonIcon\\scrMenuButtonIcon.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "333dcaa7-8239-4b9b-bd7b-54cc9a68440f",
+            "Value": {
+                "id": "73bab10a-1018-494a-a7b4-a30541f6c3cc",
+                "resourcePath": "views\\333dcaa7-8239-4b9b-bd7b-54cc9a68440f.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "38494512-8b5e-46f2-8c7b-487f65b0a28f",
             "Value": {
                 "id": "27ffcabc-4396-4c48-a504-e2d093793552",
@@ -119,6 +135,14 @@
             }
         },
         {
+            "Key": "3c11bf7c-de4a-4b0b-80d1-f4abaf42dbda",
+            "Value": {
+                "id": "363b494a-64a1-48c1-b00f-1ed61d90322f",
+                "resourcePath": "scripts\\_menuButtonEffect\\_menuButtonEffect.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4b3aba13-883f-4711-a613-9cfc3aa21829",
             "Value": {
                 "id": "abe9d5e3-9c32-46e4-add9-ee21e92f8d51",
@@ -148,6 +172,14 @@
                 "id": "b7ceb111-9c8c-446c-bb05-0d6446992122",
                 "resourcePath": "scripts\\scrDrawConfig\\scrDrawConfig.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "71ad632a-be67-463e-a1fd-168871e978b2",
+            "Value": {
+                "id": "adb42b69-d9b3-43f3-a542-a7ebb375aa25",
+                "resourcePath": "sprites\\sprMenuPlayer\\sprMenuPlayer.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -287,6 +319,22 @@
             }
         },
         {
+            "Key": "c710fd35-1d31-4b5d-88c7-6997266333b8",
+            "Value": {
+                "id": "2643c6d2-1999-4371-ac06-5b28e00f977b",
+                "resourcePath": "objects\\objMapName\\objMapName.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c80df4fd-7697-40fb-bbe8-868f53051bb8",
+            "Value": {
+                "id": "1dbed3fa-2895-404e-bd4d-e8ff23359417",
+                "resourcePath": "sprites\\sprMenuAbout\\sprMenuAbout.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ca2abd51-c245-4c74-ba1b-efc8e1aa5db3",
             "Value": {
                 "id": "cfb30af5-7998-4626-b1d2-836bb0c451c5",
@@ -343,10 +391,26 @@
             }
         },
         {
+            "Key": "e6bac21b-c852-4b09-9e55-a2e12b7cbd93",
+            "Value": {
+                "id": "83c5ec18-2d36-46f8-8488-62f8dab2059a",
+                "resourcePath": "sprites\\sprMenuMap\\sprMenuMap.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e8fbe90e-fc8f-459a-84d3-08b624a6fa17",
             "Value": {
                 "id": "73e05a4b-6177-4ee4-a3b9-56741ca01bfa",
                 "resourcePath": "views\\e8fbe90e-fc8f-459a-84d3-08b624a6fa17.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f1e05657-a987-44c0-a44e-57b4f22954eb",
+            "Value": {
+                "id": "6a446c6a-7cff-46f7-8658-77692a601834",
+                "resourcePath": "views\\f1e05657-a987-44c0-a44e-57b4f22954eb.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -356,6 +420,14 @@
                 "id": "7f614f77-6882-482c-8302-a2c2cd1ed8eb",
                 "resourcePath": "views\\f21efd3b-98ac-4d01-80db-570ebb95a576.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f2890020-c48c-46b6-b158-10cba7a60939",
+            "Value": {
+                "id": "ba5a903b-44fc-4dc9-8089-235907a4c425",
+                "resourcePath": "sprites\\sprMenuFile\\sprMenuFile.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -377,7 +449,9 @@
     ],
     "script_order": [
         "1f2d6498-3f9d-45e9-b25f-b5189d4f33e5",
-        "651e94f5-283d-4d31-8bef-05c98743d918"
+        "651e94f5-283d-4d31-8bef-05c98743d918",
+        "2e3faebe-fdc4-414c-a4bb-fff39e0b7177",
+        "3c11bf7c-de4a-4b0b-80d1-f4abaf42dbda"
     ],
     "tutorial": ""
 }
