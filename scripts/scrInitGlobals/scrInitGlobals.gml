@@ -10,3 +10,9 @@
 room_speed = 50; // 正常I Wanna的帧数（50FPS/s）
 global.state = GLOBALSTATE_EDIT; // 全局模式，防止误触
 global.mapName = "Untitled"; // 地图名字
+global.mapX = objMapArea.x; // 地图的相对原点位置X
+global.mapY = objMapArea.y; // 地图的相对原点位置Y
+global.zoomLevel = 1; // 地图缩放级别
+global.zoomLevelLast = 1; // 还原缩放级别
+global.zoomX = objZoomPos.x; // 缩放位置X
+global.zoomY = objZoomPos.y; // 缩放位置Y

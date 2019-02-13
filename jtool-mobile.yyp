@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "317ec3c6-5a16-40fc-9287-9da1c7b0fc16",
+            "Value": {
+                "id": "4212a93f-2d17-44d8-9e37-d7c410d4888c",
+                "resourcePath": "objects\\objZoomMove\\objZoomMove.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "333dcaa7-8239-4b9b-bd7b-54cc9a68440f",
             "Value": {
                 "id": "73bab10a-1018-494a-a7b4-a30541f6c3cc",
@@ -159,6 +167,14 @@
             }
         },
         {
+            "Key": "51cb0677-b220-4558-97ba-a4694faa027e",
+            "Value": {
+                "id": "39bb1041-3efa-4ce4-acc0-69408b87907d",
+                "resourcePath": "sprites\\sprMenuZoomDown\\sprMenuZoomDown.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "64bf7372-bcf3-496e-9b40-77a8a9952110",
             "Value": {
                 "id": "5de7964e-df76-4849-8d49-74afdf5a8e01",
@@ -172,6 +188,14 @@
                 "id": "b7ceb111-9c8c-446c-bb05-0d6446992122",
                 "resourcePath": "scripts\\scrDrawConfig\\scrDrawConfig.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "66bcd02a-7f08-4b3a-8621-0f5171ab9ab7",
+            "Value": {
+                "id": "4e57e41d-14f2-49a0-bf71-3b4041e1d05d",
+                "resourcePath": "sprites\\sprMenuZoomMove\\sprMenuZoomMove.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -239,6 +263,14 @@
             }
         },
         {
+            "Key": "8a5e46f7-a427-4972-8f81-432c76814e99",
+            "Value": {
+                "id": "aefa0f21-0f76-48fb-9b56-a67f9a0fa3d5",
+                "resourcePath": "objects\\objZoomEffect\\objZoomEffect.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8ee8c5a5-8297-4f14-b4be-7508b2eccfd0",
             "Value": {
                 "id": "6c7aec94-ad71-4cea-b5ac-3c9b5c3af29e",
@@ -268,6 +300,14 @@
                 "id": "78f26e97-b2b6-4435-89eb-59867cb8d6ea",
                 "resourcePath": "options\\tvos\\options_tvos.yy",
                 "resourceType": "GMtvOSOptions"
+            }
+        },
+        {
+            "Key": "94f81922-8265-4ad5-a992-e0034f8fa719",
+            "Value": {
+                "id": "58369520-96c6-4f36-8cba-f39cd8223d7e",
+                "resourcePath": "objects\\objZoom\\objZoom.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -351,6 +391,14 @@
             }
         },
         {
+            "Key": "d0752771-0d07-4282-86e9-444bad286930",
+            "Value": {
+                "id": "2f5caff8-48ac-43eb-9d0b-b51c03706caf",
+                "resourcePath": "sprites\\sprMenuZoomPos\\sprMenuZoomPos.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d51a826c-58bb-4595-aea6-3c178392d068",
             "Value": {
                 "id": "3159f2bb-cfde-45ca-bf9c-94f2bc7048db",
@@ -407,6 +455,14 @@
             }
         },
         {
+            "Key": "ee18ca21-f65e-43b4-bcbc-b98f80d43f94",
+            "Value": {
+                "id": "b3d2b47b-ed77-4963-bbf6-e33dd287f0d8",
+                "resourcePath": "sprites\\sprMenuZoomUp\\sprMenuZoomUp.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f1e05657-a987-44c0-a44e-57b4f22954eb",
             "Value": {
                 "id": "6a446c6a-7cff-46f7-8658-77692a601834",
@@ -428,6 +484,14 @@
                 "id": "ba5a903b-44fc-4dc9-8089-235907a4c425",
                 "resourcePath": "sprites\\sprMenuFile\\sprMenuFile.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f3468952-8ef1-4891-ac70-7e4cb32fd90f",
+            "Value": {
+                "id": "58b743a4-c0df-4759-a4d3-b890c5a4494e",
+                "resourcePath": "objects\\objZoomPos\\objZoomPos.yy",
+                "resourceType": "GMObject"
             }
         },
         {

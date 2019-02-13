@@ -5,7 +5,7 @@
 /// @arg w
 /// @arg h
 ef = true;
-efAlpha = 1;
+efAlpha = 0;
 efX = argument0;
 efY = argument1;
 efW = argument2;
