@@ -1,2 +1,3 @@
 /// @desc DEBUG
-show_debug_message(instance_count);
+global.mouseClick = mouse_check_button(mb_left);
+show_debug_message(global.mouseClick);

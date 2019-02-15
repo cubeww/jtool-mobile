@@ -20,5 +20,9 @@ var dy = yy;
 draw_sprite(spr, 0, dx + sprite_get_xoffset(spr) - sprite_get_width(spr) / 2 + ww / 2,
 		dy + sprite_get_yoffset(spr) - sprite_get_height(spr) / 2 + ww / 2);
 // 检测按键
-return point_in_rectangle(mouse_x, mouse_y, xx + 1, yy + 1, xx + ww - 1, yy + hh - 1) && 
-		mouse_check_button_pressed(mb_left);
+if (point_in_rectangle(mouse_x, mouse_y, xx + 1, yy + 1, xx + ww - 1, yy + hh - 1) && mouse_check_button_pressed(mb_left))
+{
+	mouse_clear(mb_left);
+	return true;
+}
+return false;

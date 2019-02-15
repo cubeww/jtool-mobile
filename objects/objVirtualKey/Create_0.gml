@@ -7,3 +7,4 @@ enum KEY
 	SHOOT = 3,
 	RESTART = 4
 }
+key = 0;

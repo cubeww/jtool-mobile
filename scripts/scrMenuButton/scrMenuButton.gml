@@ -23,5 +23,9 @@ draw_sprite(icon, 0, dx, dy);
 // 绘制文字
 draw_text(xx + 32, yy + hh / 2, str);
 // 检测按键
-return point_in_rectangle(mouse_x, mouse_y, xx + 1, yy + 1, xx + ww - 1, yy + hh - 1) && 
-		mouse_check_button_pressed(mb_left);
+if (point_in_rectangle(mouse_x, mouse_y, xx + 1, yy + 1, xx + ww - 1, yy + hh - 1) && mouse_check_button_pressed(mb_left))
+{
+	mouse_clear(mb_left);
+	return true;
+}
+return false;

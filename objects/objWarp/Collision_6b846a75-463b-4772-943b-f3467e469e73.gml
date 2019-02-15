@@ -9,4 +9,4 @@ with (other)
     inst.image_xscale = global.playerXscale;
     instance_destroy();
 }
-image_blend = c_green;
+image_blend = make_color_rgb(118, 238, 0);

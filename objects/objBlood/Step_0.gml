@@ -1,5 +1,5 @@
 /// @desc 出屏销毁
-if (x < -20 || x > 820 || y > 1000)
+if (x < global.mapX - 20 || x > global.mapX + 820 || y > global.mapX + 1000)
 {
 	instance_destroy();
 }

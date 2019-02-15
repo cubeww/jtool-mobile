@@ -12,6 +12,7 @@ var bw = 192;	// 按钮的宽度
 var bh = 48;	// 按钮的高度
 scrDrawConfig(c_black, 1, fUI24, fa_left, fa_top);
 draw_text(x, y, "Menu");
+
 #region 头按钮
 var i = 0;
 if (scrMenuButtonIcon(xx + xb * i, yy, iconW, iconH, sprMenuFile))
@@ -68,9 +69,50 @@ if (page == PAGE_FILE)
 }
 #endregion 
 #region 玩家
-
+if (page == PAGE_PLAYER)
+{
+	yy = ys;
+	scrDrawConfig(c_black, 1, fSettings, fa_left, fa_top);
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuEdit, "Death: " + (global.canDeath ? "On" : "Off")))
+	{
+		// 开启死亡模式
+		global.canDeath = !global.canDeath;
+	}
+	
+	yy += yb;
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuOpen, "Dotkid: " + (global.dotkid == 0 ? "Off" : (global.dotkid == 1 ? "Outline" : "On"))))
+	{
+		// 点KID
+		if (global.dotkid < 2) global.dotkid++;
+		else global.dotkid = 0;
+	}
+	
+	yy += yb;
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuSave, "Infjump: " + (global.infjump ? "On" : "Off")))
+	{
+		// 无限跳跃
+		global.infjump = !global.infjump;
+	}
+	yy += yb;
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuSave, "Hitbox: " + (global.showhitbox == 0 ? "Player" : (global.showhitbox == 1 ? "Both" : "Hitbox"))))
+	{
+		// 碰撞盒子
+		if (global.showhitbox < 2) global.showhitbox++;
+		else global.showhitbox = 0;
+	}
+	yy += yb;
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuSave, "Savetype: " + (global.savetype ? "Shoot" : "Touch")))
+	{
+		// 存档类型
+		global.savetype = !global.savetype;
+	}
+}
 #endregion
 #region 地图
+if (page == PAGE_MAP)
+{
+	
+}
 #endregion
 #region 关于
 if (page == PAGE_ABOUT)

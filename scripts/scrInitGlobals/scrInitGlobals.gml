@@ -31,6 +31,7 @@
 // 全局
 room_speed = 50;						// 正常I Wanna的帧数（50FPS/s）
 global.state = GLOBALSTATE_EDIT;		// 全局模式，防止误触
+display_set_gui_size(1280, 720);		// 设定GUI大小
 // 地图
 global.mapName = "Untitled";			// 地图名字
 global.mapX = objMapArea.x;				// 地图的相对原点位置X
@@ -56,7 +57,7 @@ global.savePlayerY = 0;					// 玩家Y
 global.grav = 1;						// 玩家重力
 global.playerXscale = 1;				// 玩家朝向
 global.savePlayerXscale = 1;			// 储存玩家重力
-global.savePlayerGrav = 1;				// 储存玩家朝向
+global.saveGrav = 1;				// 储存玩家朝向
 global.dotkid = NORMAL_KID;				// 是否为点KID模式
 global.infjump = false;					// 是否为无限跳模式
 global.canDeath = true;					// 是否开启死亡

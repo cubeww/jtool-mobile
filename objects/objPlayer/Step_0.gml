@@ -1,5 +1,5 @@
 /// @desc 玩家控制
-var h = keyboard_check_direct(global.rightButton) ? 1 : -keyboard_check_direct(global.leftButton);
+var h = keyboard_check(global.rightButton) ? 1 : -keyboard_check(global.leftButton);
 // 移动
 if (h != 0)
 {

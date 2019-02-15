@@ -6,4 +6,6 @@ with (object_index)
 }
 with (objPlayer)
 	instance_destroy();
+global.savePlayerX = x + 17;
+global.savePlayerY = y + 23;
 instance_create_layer(x + 17, y + 23, "Player", objPlayer);
