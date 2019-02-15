@@ -1,62 +1,66 @@
 /// @desc 绘制游戏总菜单
-var xx = x;
-var yy = y;
-var yp = 32;
-var iconW = 32;
-var iconH = 32;
-var i = 0;
-var editX = 191;
+var xs = x;		// 起始的按钮X
+var iys = 56;	// 起始的头按钮Y
+var ys = 120;	// 起始的按钮Y
+var xx = xs;	// 当前的X
+var yy = iys;	// 当前的Y
+var xb = 48;	// 头按钮的横向间隔
+var yb = 48;	// 按钮的上下间隔
+var iconW = 48;	// 头按钮的宽度
+var iconH = 48;	// 头按钮的高度
+var bw = 192;	// 按钮的宽度
+var bh = 48;	// 按钮的高度
 scrDrawConfig(c_black, 1, fUI24, fa_left, fa_top);
-draw_text(xx, yy, "Menu");
-yy = 56;
+draw_text(x, y, "Menu");
 #region 头按钮
-if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuFile))
+var i = 0;
+if (scrMenuButtonIcon(xx + xb * i, yy, iconW, iconH, sprMenuFile))
 {	
 	// 文件操作
 	page = PAGE_FILE;
-	ef.x = xx + yp * i;
+	ef.x = xx + xb * i;
 }
 i++;
-if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuPlayer))
+if (scrMenuButtonIcon(xx + xb * i, yy, iconW, iconH, sprMenuPlayer))
 {
 	// 玩家设置
 	page = PAGE_PLAYER;
-	ef.x = xx + yp * i;
+	ef.x = xx + xb * i;
 }
 i++;
-if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuMap))
+if (scrMenuButtonIcon(xx + xb * i, yy, iconW, iconH, sprMenuMap))
 {
 	// 地图选项
 	page = PAGE_MAP;
-	ef.x = xx + yp * i;
+	ef.x = xx + xb * i;
 }
 i++;
-if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuAbout))
+if (scrMenuButtonIcon(xx + xb * i, yy, iconW, iconH, sprMenuAbout))
 {
 	// 地图选项
 	page = PAGE_ABOUT;
-	ef.x = xx + yp * i;
+	ef.x = xx + xb * i;
 }
 #endregion
 #region 文件
 if (page == PAGE_FILE)
 {
-	yy = 56 + yp + 32;
+	yy = ys;
 	scrDrawConfig(c_black, 1, fSettings, fa_left, fa_top);
-	if (scrMenuButton(xx, yy, 176, 48, sprMenuEdit, "Map Name"))
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuEdit, "Map Name"))
 	{
 		// 地图改名
 		global.mapName = get_string("Map Name", global.mapName);
 	}
 	
-	yy += yp * 2;
-	if (scrMenuButton(xx, yy, 176, 48, sprMenuOpen, "Open JMap"))
+	yy += yb;
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuOpen, "Open JMap"))
 	{
 		// 打开地图
 	}
 	
-	yy += yp * 2;
-	if (scrMenuButton(xx, yy, 176, 48, sprMenuSave, "Save JMap"))
+	yy += yb;
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuSave, "Save JMap"))
 	{
 		// 保存地图
 	}
@@ -71,7 +75,7 @@ if (page == PAGE_FILE)
 #region 关于
 if (page == PAGE_ABOUT)
 {
-	yy = 56 + yp + 32;
+	yy = ys;
 	scrDrawConfig(c_black, 1, fBold, fa_left, fa_top);
 	xx = x;
 	draw_text(xx, yy, "Jtool Mobile \n            v0.15\nBy Cube");

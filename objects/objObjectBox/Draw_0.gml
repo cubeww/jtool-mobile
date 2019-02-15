@@ -1,44 +1,44 @@
 /// @desc 绘制对象盒子
-var xx = x;
-var yy = y;
-var yp = 32;
-var iconW = 32;
-var iconH = 32;
-var i = 0;
-var editX = 191;
+var xs = x;		// 起始的按钮X
+var ys = 56;	// 起始的头按钮Y
+var xx = xs;	// 当前的X
+var yy = ys;	// 当前的Y
+var xb = 48;	// 头按钮的横向间隔
+var iconW = 48;	// 头按钮的宽度
+var iconH = 48;	// 头按钮的高度
 scrDrawConfig(c_black, 1, fUI24, fa_left, fa_top);
-draw_text(xx, yy, "Object");
-yy = 56;
+draw_text(x, y, "Object");
 #region 头按钮
-if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuWorld))
+var i = 0;
+if (scrMenuButtonIcon(xx + xb * i, yy, iconW, iconH, sprMenuWorld))
 {	
 	// 世界
 	page = PAGE_WORLD;
-	ef.x = xx + yp * i;
+	ef.x = xx + xb * i;
 	event_user(0);
 }
 i++;
-if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuBlock))
+if (scrMenuButtonIcon(xx + xb * i, yy, iconW, iconH, sprMenuBlock))
 {
 	// 砖
 	page = PAGE_BLOCK;
-	ef.x = xx + yp * i;
+	ef.x = xx + xb * i;
 	event_user(0);
 }
 i++;
-if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuKiller))
+if (scrMenuButtonIcon(xx + xb * i, yy, iconW, iconH, sprMenuKiller))
 {
 	// 杀人
 	page = PAGE_KILLER;
-	ef.x = xx + yp * i;
+	ef.x = xx + xb * i;
 	event_user(0);
 }
 i++;
-if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuMisc))
+if (scrMenuButtonIcon(xx + xb * i, yy, iconW, iconH, sprMenuMisc))
 {
 	// 其它
 	page = PAGE_MISC;
-	ef.x = xx + yp * i;
+	ef.x = xx + xb * i;
 	event_user(0);
 }
 #endregion

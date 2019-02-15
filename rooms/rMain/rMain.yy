@@ -118,8 +118,8 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Block",
-            "id": "75c42544-c2bd-40b9-81ae-b4513f88c76d",
+            "name": "Water",
+            "id": "7e24710c-8e0d-42da-aa7c-5581256e53ad",
             "depth": 300,
             "grid_x": 32,
             "grid_y": 32,
@@ -196,8 +196,8 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Water",
-            "id": "7e24710c-8e0d-42da-aa7c-5581256e53ad",
+            "name": "Killer",
+            "id": "58cd7739-9cd1-4764-91b9-e95f15a870af",
             "depth": 600,
             "grid_x": 32,
             "grid_y": 32,
@@ -222,9 +222,35 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Killer",
-            "id": "58cd7739-9cd1-4764-91b9-e95f15a870af",
+            "name": "Misc",
+            "id": "ad371a99-b07d-43bc-8777-afd165811531",
             "depth": 700,
+            "grid_x": 32,
+            "grid_y": 32,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "instances": [
+
+            ],
+            "layers": [
+
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "modelName": "GMRInstanceLayer",
+            "mvc": "1.0",
+            "userdefined_depth": false,
+            "visible": true
+        },
+        {
+            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+            "name": "Block",
+            "id": "75c42544-c2bd-40b9-81ae-b4513f88c76d",
+            "depth": 800,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -253,7 +279,7 @@
             "animationFPS": 15,
             "animationSpeedType": "0",
             "colour": { "Value": 4294967295 },
-            "depth": 800,
+            "depth": 900,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -317,7 +343,7 @@
     "viewSettings":     {
         "id": "d0d3ec6f-9870-4e77-b800-50fac37c5af4",
         "clearDisplayBuffer": true,
-        "clearViewBackground": false,
+        "clearViewBackground": true,
         "enableViews": true,
         "inheritViewSettings": false,
         "modelName": "GMRoomViewSettings",

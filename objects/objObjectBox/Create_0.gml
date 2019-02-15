@@ -15,6 +15,11 @@ for (var j = 0; j < 4; j++)
 var p = PAGE_WORLD;
 i = 0;
 obj[p, i++] = objPlayerStart;
+obj[p, i++] = objWarp;
+obj[p, i++] = objSave;
+obj[p, i++] = objSaveFlip;
+obj[p, i++] = objGravityUp;
+obj[p, i++] = objGravityDown;
 
 #endregion
 
@@ -22,6 +27,9 @@ obj[p, i++] = objPlayerStart;
 var p = PAGE_BLOCK;
 i = 0;
 obj[p, i++] = objBlock;
+obj[p, i++] = objMiniBlock;
+obj[p, i++] = objPlatform;
+obj[p, i++] = objSaveBlocker;
 
 #endregion
 
@@ -29,13 +37,26 @@ obj[p, i++] = objBlock;
 var p = PAGE_KILLER;
 i = 0;
 obj[p, i++] = objSpikeUp;
-
+obj[p, i++] = objSpikeDown;
+obj[p, i++] = objSpikeLeft;
+obj[p, i++] = objSpikeRight;
+obj[p, i++] = objMiniSpikeUp;
+obj[p, i++] = objMiniSpikeDown;
+obj[p, i++] = objMiniSpikeLeft;
+obj[p, i++] = objMiniSpikeRight;
+obj[p, i++] = objCherry;
+obj[p, i++] = objKillerBlock;
 
 #endregion
 
 #region 其它
 var p = PAGE_MISC;
 i = 0;
+obj[p, i++] = objWater;
+obj[p, i++] = objWater2;
+obj[p, i++] = objWalljumpL;
+obj[p, i++] = objWalljumpR;
+obj[p, i++] = objJumpRefresher;
 
 
 #endregion
