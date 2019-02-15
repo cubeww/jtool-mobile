@@ -24,6 +24,6 @@ if (!global.dotkid)	// 是否为点KID模式
 }
 else // 点KID模式
 {
-    mask_index = sprDotkid
-    sprite_index = sprDotkid
+    mask_index = sprDotkid;
+    sprite_index = sprDotkid;
 }

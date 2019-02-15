@@ -15,6 +15,17 @@
 #macro PAGE_BLOCK 1
 #macro PAGE_KILLER 2
 #macro PAGE_MISC 3
+// 点KID模式
+#macro NORMAL_KID 0
+#macro DOT_KID 1
+#macro DOT_KID_WITH_OUTLINE 2
+// 碰撞盒
+#macro HITBOX_ONLY_PLAYER 0
+#macro HITBOX_ALL 1
+#macro HITBOX_ONLY_HITBOX 2
+// 存档类型
+#macro SAVETYPE_SHOOT 0
+#macro SAVETYPE_TOUCH 1
 
 // 定义全局变量
 // 全局
@@ -46,4 +57,15 @@ global.grav = 1;						// 玩家重力
 global.playerXscale = 1;				// 玩家朝向
 global.savePlayerXscale = 1;			// 储存玩家重力
 global.savePlayerGrav = 1;				// 储存玩家朝向
-global.dotkid = false;					// 是否为点KID模式
+global.dotkid = NORMAL_KID;				// 是否为点KID模式
+global.infjump = false;					// 是否为无限跳模式
+global.canDeath = true;					// 是否开启死亡
+// 按键
+global.leftButton = vk_left;
+global.rightButton = vk_right;
+global.jumpButton = vk_shift;
+global.shootButton = ord("Z");
+global.restartButton = ord("R");
+// 杂项
+global.showhitbox = HITBOX_ONLY_PLAYER;	// 碰撞盒显示模式
+global.savetype = SAVETYPE_SHOOT;		// 存档模式

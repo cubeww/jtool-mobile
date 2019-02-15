@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "objGravityDown",
     "eventList": [
-        
+        {
+            "id": "ca5a505e-b7ad-497c-956d-228ddea708fc",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "accdfcf2-e173-4a1c-8fc3-5ce4ecf62542",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "1c81d734-43a5-4f52-8ba2-09b60412774e"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

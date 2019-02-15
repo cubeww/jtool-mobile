@@ -3,7 +3,6 @@
 /// @arg obj
 switch (argument0) 
 {
-    case objPlayerStart:
 	case objSave:
 	case objSaveFlip:
 	case objWarp:
@@ -33,6 +32,7 @@ switch (argument0)
 	case objWalljumpR:
 		return "Vine";
 	case objJumpRefresher:
+	case objPlayerStart:
 		return "Misc";
 		
     default:
