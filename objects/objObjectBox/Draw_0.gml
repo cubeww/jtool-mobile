@@ -13,29 +13,29 @@ yy = 56;
 if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuWorld))
 {	
 	// 世界
-	_menuButtonEffect(xx + yp * i, yy, iconW, iconH);
-	page = OPAGE.WORLD;
+	page = PAGE_WORLD;
+	ef.x = xx + yp * i;
 }
 i++;
 if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuBlock))
 {
 	// 砖
-	_menuButtonEffect(xx + yp * i, yy, iconW, iconH);
-	page = OPAGE.BLOCK;
+	page = PAGE_BLOCK;
+	ef.x = xx + yp * i;
 }
 i++;
 if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuKiller))
 {
 	// 杀人
-	_menuButtonEffect(xx + yp * i, yy, iconW, iconH);
-	page = OPAGE.KILLER;
+	page = PAGE_KILLER;
+	ef.x = xx + yp * i;
 }
 i++;
 if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuMisc))
 {
 	// 其它
-	_menuButtonEffect(xx + yp * i, yy, iconW, iconH);
-	page = OPAGE.MISC;
+	page = PAGE_MISC;
+	ef.x = xx + yp * i;
 }
 #endregion
 #region 绘制各个对象
@@ -56,7 +56,14 @@ for (var i = 0, count = 0; i < maxH; i++)
 			var dx = xs + j * xb;
 			var dy = ys + i * yb;
 			var dobj = obj[page, count];
-			scrObjectButton(dx, dy, ww, hh, object_get_sprite(dobj));
+			if (scrObjectButton(dx, dy, ww, hh, object_get_sprite(dobj)))
+			{
+				// 触发按下特效
+				ef2.x = dx;
+				ef2.y = dy;
+				// 切换全局摆放对象
+				global.currentObject = dobj;
+			}
 			count++;
 		}
 		else break;
@@ -64,7 +71,3 @@ for (var i = 0, count = 0; i < maxH; i++)
 }
 
 #endregion
-
-
-// 按钮特效
-event_user(0);

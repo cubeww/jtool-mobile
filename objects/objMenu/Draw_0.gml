@@ -13,33 +13,33 @@ yy = 56;
 if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuFile))
 {	
 	// 文件操作
-	_menuButtonEffect(xx + yp * i, yy, iconW, iconH);
-	page = PAGE.FILE;
+	page = PAGE_FILE;
+	ef.x = xx + yp * i;
 }
 i++;
 if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuPlayer))
 {
 	// 玩家设置
-	_menuButtonEffect(xx + yp * i, yy, iconW, iconH);
-	page = PAGE.PLAYER;
+	page = PAGE_PLAYER;
+	ef.x = xx + yp * i;
 }
 i++;
 if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuMap))
 {
 	// 地图选项
-	_menuButtonEffect(xx + yp * i, yy, iconW, iconH);
-	page = PAGE.MAP;
+	page = PAGE_MAP;
+	ef.x = xx + yp * i;
 }
 i++;
 if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuAbout))
 {
 	// 地图选项
-	_menuButtonEffect(xx + yp * i, yy, iconW, iconH);
-	page = PAGE.ABOUT;
+	page = PAGE_ABOUT;
+	ef.x = xx + yp * i;
 }
 #endregion
 #region 文件
-if (page == PAGE.FILE)
+if (page == PAGE_FILE)
 {
 	yy = 56 + yp + 32;
 	scrDrawConfig(c_black, 1, fSettings, fa_left, fa_top);
@@ -69,7 +69,7 @@ if (page == PAGE.FILE)
 #region 地图
 #endregion
 #region 关于
-if (page == PAGE.ABOUT)
+if (page == PAGE_ABOUT)
 {
 	yy = 56 + yp + 32;
 	scrDrawConfig(c_black, 1, fBold, fa_left, fa_top);
@@ -77,4 +77,3 @@ if (page == PAGE.ABOUT)
 	draw_text(xx, yy, "Jtool Mobile \n            v0.15\nBy Cube");
 }
 #endregion
-event_user(0); // 绘制按下特效

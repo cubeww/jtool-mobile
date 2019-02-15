@@ -1,0 +1,2 @@
+drawX = x;
+drawY = y;

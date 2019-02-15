@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "04526f0c-e36d-4fae-9fb0-7198ca4cc6ec",
+            "Value": {
+                "id": "fcbfa57f-4441-40a6-93fe-607ac10ee5eb",
+                "resourcePath": "scripts\\scrDestroyIfOutRange\\scrDestroyIfOutRange.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0581b0c6-04d3-40ec-84a3-bc02dff1326e",
             "Value": {
                 "id": "650b8755-3eba-4f48-a7f8-46da09b193e0",
@@ -76,6 +84,14 @@
                 "id": "034b3d97-5697-4e50-abf3-b7c4f1a21e52",
                 "resourcePath": "views\\0a639c5b-01c4-466a-946c-7b0121aaa409.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "0d3f6658-6c52-45c4-9bdd-8a455cba5612",
+            "Value": {
+                "id": "e46ffbb5-a103-4718-bcec-1063725c1a02",
+                "resourcePath": "scripts\\scrDestroyIfSame\\scrDestroyIfSame.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -199,14 +215,6 @@
             }
         },
         {
-            "Key": "3c11bf7c-de4a-4b0b-80d1-f4abaf42dbda",
-            "Value": {
-                "id": "363b494a-64a1-48c1-b00f-1ed61d90322f",
-                "resourcePath": "scripts\\_menuButtonEffect\\_menuButtonEffect.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "45d9c0a2-c314-4a35-9d63-1ba8bebeab02",
             "Value": {
                 "id": "97f8b575-5473-4c11-9c17-4a552c938add",
@@ -252,6 +260,14 @@
                 "id": "39bb1041-3efa-4ce4-acc0-69408b87907d",
                 "resourcePath": "sprites\\sprMenuZoomDown\\sprMenuZoomDown.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "53b6a3cf-756b-43cc-a42a-e5e8009ba5d1",
+            "Value": {
+                "id": "396e2d95-f575-4e96-b72d-a4ea9d82c615",
+                "resourcePath": "objects\\objEditor\\objEditor.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -431,6 +447,14 @@
             }
         },
         {
+            "Key": "9782e74e-9fbd-49f8-90fd-e439918d9f91",
+            "Value": {
+                "id": "472f3aea-762d-4e4c-b1a9-76837bef7c16",
+                "resourcePath": "extensions\\Clipboard\\Clipboard.yy",
+                "resourceType": "GMExtension"
+            }
+        },
+        {
             "Key": "9b79ee68-5208-4c0b-ad87-34594267f94f",
             "Value": {
                 "id": "b21084c4-a147-4b52-ace6-ab97b47a2644",
@@ -444,6 +468,14 @@
                 "id": "292523c4-030d-461a-b1fd-d8fc5834c723",
                 "resourcePath": "sprites\\sprMenuSave\\sprMenuSave.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9dc2b74f-aef4-4b01-a9d8-cf577f7d32e5",
+            "Value": {
+                "id": "b273a866-5733-4592-9453-7d49c3e3a9ed",
+                "resourcePath": "scripts\\scrGetObjectLayer\\scrGetObjectLayer.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -495,6 +527,14 @@
             }
         },
         {
+            "Key": "b8b1b77c-d026-47f8-b227-108a48572620",
+            "Value": {
+                "id": "d6893185-de07-4dbe-bf1f-57a7f2a5e520",
+                "resourcePath": "objects\\objButtonEffect\\objButtonEffect.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ba81e79a-6d73-43ea-a7b5-10d3eb87b13a",
             "Value": {
                 "id": "d1af1be9-5158-4fa2-b9d1-f1c4f87b7794",
@@ -540,6 +580,14 @@
                 "id": "4c9e60be-ffd8-4eec-ad1d-90bd0713b83e",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "cd7bfd85-39d4-4041-bc01-ac4540f10d85",
+            "Value": {
+                "id": "b74ace8c-1a32-47ab-9e4e-8215234245de",
+                "resourcePath": "scripts\\scrIsEditorObject\\scrIsEditorObject.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -693,7 +741,10 @@
         "2e3faebe-fdc4-414c-a4bb-fff39e0b7177",
         "4886a289-a4ce-496e-8153-a607c932d61a",
         "01924431-0a64-4725-80d3-77b56cb108ec",
-        "3c11bf7c-de4a-4b0b-80d1-f4abaf42dbda"
+        "04526f0c-e36d-4fae-9fb0-7198ca4cc6ec",
+        "0d3f6658-6c52-45c4-9bdd-8a455cba5612",
+        "9dc2b74f-aef4-4b01-a9d8-cf577f7d32e5",
+        "cd7bfd85-39d4-4041-bc01-ac4540f10d85"
     ],
     "tutorial": ""
 }

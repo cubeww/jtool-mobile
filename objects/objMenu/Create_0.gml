@@ -1,10 +1,4 @@
 /// @desc 初始化变量
-ef = false; // 按钮按下特效
-efAlpha = 0;
-efX = 0;
-efY = 0;
-efW = 0;
-efH = 0;
-
-page = PAGE.FILE;
-_menuButtonEffect(x, 56, 32, 32);
+page = PAGE_FILE;
+// 按下特效
+ef = instance_create_layer(x, 56, "ButtonEffect", objButtonEffect);

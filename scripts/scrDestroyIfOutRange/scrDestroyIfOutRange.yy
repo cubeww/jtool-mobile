@@ -1,8 +1,8 @@
 {
-    "id": "3c11bf7c-de4a-4b0b-80d1-f4abaf42dbda",
+    "id": "04526f0c-e36d-4fae-9fb0-7198ca4cc6ec",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "_menuButtonEffect",
+    "name": "scrDestroyIfOutRange",
     "IsCompatibility": false,
     "IsDnD": false
 }
