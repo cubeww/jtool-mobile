@@ -7,7 +7,7 @@
         
     ],
     "filterType": "GMScript",
-    "folderName": "Instance",
+    "folderName": "Player",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
