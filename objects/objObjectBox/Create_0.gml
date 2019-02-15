@@ -13,19 +13,31 @@ for (var j = 0; j < 4; j++)
 }
 #region 世界
 var p = PAGE_WORLD;
+i = 0;
 obj[p, i++] = objPlayerStart;
+
 #endregion
 
 #region 砖块
 var p = PAGE_BLOCK;
+i = 0;
+obj[p, i++] = objBlock;
+
 #endregion
 
 #region 杀人
 var p = PAGE_KILLER;
+i = 0;
+obj[p, i++] = objSpikeUp;
+
+
 #endregion
 
 #region 其它
 var p = PAGE_MISC;
+i = 0;
+
+
 #endregion
 
 // 按下特效 

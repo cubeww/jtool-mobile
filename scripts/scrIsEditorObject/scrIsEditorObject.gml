@@ -4,8 +4,11 @@
 switch (argument0)
 {
 	case objPlayerStart:
+	
+	case objBlock: 
+	
+	case objSpikeUp:
 		return true;
-		break;
 	default:
 		return false;
 }

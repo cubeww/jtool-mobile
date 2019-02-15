@@ -5,8 +5,10 @@ switch (argument0)
 {
     case objPlayerStart: 
 		return "Player";
-		break;
+	case objBlock:
+		return "Block";
+	case objSpikeUp:
+		return "Killer";
     default:
-        return "World";
-		break;
+        return "Player";
 }

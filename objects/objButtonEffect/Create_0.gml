@@ -4,3 +4,4 @@ w = 32;
 h = 32;
 xp = x;
 yp = y;
+atPage = 0;

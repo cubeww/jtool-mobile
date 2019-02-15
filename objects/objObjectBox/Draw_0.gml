@@ -15,6 +15,7 @@ if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuWorld))
 	// 世界
 	page = PAGE_WORLD;
 	ef.x = xx + yp * i;
+	event_user(0);
 }
 i++;
 if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuBlock))
@@ -22,6 +23,7 @@ if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuBlock))
 	// 砖
 	page = PAGE_BLOCK;
 	ef.x = xx + yp * i;
+	event_user(0);
 }
 i++;
 if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuKiller))
@@ -29,6 +31,7 @@ if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuKiller))
 	// 杀人
 	page = PAGE_KILLER;
 	ef.x = xx + yp * i;
+	event_user(0);
 }
 i++;
 if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuMisc))
@@ -36,6 +39,7 @@ if (scrMenuButtonIcon(xx + yp * i, yy, iconW, iconH, sprMenuMisc))
 	// 其它
 	page = PAGE_MISC;
 	ef.x = xx + yp * i;
+	event_user(0);
 }
 #endregion
 #region 绘制各个对象
@@ -61,6 +65,8 @@ for (var i = 0, count = 0; i < maxH; i++)
 				// 触发按下特效
 				ef2.x = dx;
 				ef2.y = dy;
+				ef2.atPage = page
+				event_user(0);
 				// 切换全局摆放对象
 				global.currentObject = dobj;
 			}
