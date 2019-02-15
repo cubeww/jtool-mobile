@@ -36,8 +36,8 @@ if (mouse_check_button_released(mb_left) && prev) // 如果松开
 	prev = false;
 			
 	// 创建对象
-	var mx = (mouse_x - global.mapX) div global.snapW * global.snapW + global.mapX;
-	var my = (mouse_y - global.mapY) div global.snapH * global.snapH + global.mapY;
+	var mx = (mouse_x - global.mapX + global.snapX) div global.snapW * global.snapW + global.mapX;
+	var my = (mouse_y - global.mapY + global.snapY) div global.snapH * global.snapH + global.mapY;
 	var obj = global.currentObject;
 	var inst = instance_create_layer(mx, my, scrGetObjectLayer(obj), obj);
 	with (inst)

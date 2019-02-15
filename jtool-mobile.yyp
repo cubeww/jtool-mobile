@@ -1023,6 +1023,14 @@
             }
         },
         {
+            "Key": "ad7b260f-0b82-4cbd-8306-5471a3e484bb",
+            "Value": {
+                "id": "0fcf7be3-897a-45c8-81e9-2c719a68c2e3",
+                "resourcePath": "sprites\\sprMenuSavetype\\sprMenuSavetype.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ae743c46-ae38-4c18-9e7c-9d88ddc5cf43",
             "Value": {
                 "id": "d10a7e39-03bc-4a63-a12b-66591485952b",
