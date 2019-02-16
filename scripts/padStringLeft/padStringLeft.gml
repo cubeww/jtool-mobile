@@ -1,7 +1,8 @@
-// Pads a string to the left with a character until it is a certain length.
-
-// padStringLeft(str,length,padchar)
-
+/// @func padStringLeft(str,length,padchar)
+/// @desc Pads a string to the left with a character until it is a certain length
+/// @arg str
+/// @arg length
+/// @arg padchar
 var str = argument0;
 var length = argument1;
 var padchar = argument2;

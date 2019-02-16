@@ -26,6 +26,9 @@
 // 存档类型
 #macro SAVETYPE_SHOOT 0
 #macro SAVETYPE_TOUCH 1
+// 出屏类型
+#macro BORDER_DEATH 0
+#macro BORDER_SOLID 1
 
 // 定义全局变量
 // 全局
@@ -57,10 +60,11 @@ global.savePlayerY = 0;					// 玩家Y
 global.grav = 1;						// 玩家重力
 global.playerXscale = 1;				// 玩家朝向
 global.savePlayerXscale = 1;			// 储存玩家重力
-global.saveGrav = 1;				// 储存玩家朝向
+global.saveGrav = 1;					// 储存玩家朝向
 global.dotkid = NORMAL_KID;				// 是否为点KID模式
 global.infjump = false;					// 是否为无限跳模式
 global.canDeath = true;					// 是否开启死亡
+global.bordertype = BORDER_DEATH;		// 出屏是否死亡
 // 按键
 global.leftButton = vk_left;
 global.rightButton = vk_right;

@@ -31,11 +31,12 @@ switch (argument0)
 	case objWalljumpR:
 		return "Vine";
 	case objJumpRefresher:
-	case objPlayerStart:
 		return "Misc";
 	case objSave:
 	case objSaveFlip:
 		return "Save";
+	case objPlayerStart:
+		return "PlayerStart";
 		
     default:
         return "Misc";

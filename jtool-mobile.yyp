@@ -399,6 +399,14 @@
             }
         },
         {
+            "Key": "3b15dead-f88f-4ec2-aba7-95120c040dd4",
+            "Value": {
+                "id": "81579ebe-8634-460c-be43-ca499ff5c4d1",
+                "resourcePath": "scripts\\scrClipboardSetString\\scrClipboardSetString.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3c8f5975-f03b-447c-94b3-3f7c6c7476d2",
             "Value": {
                 "id": "2a5822f4-49c4-4cc6-b94b-e7b7d6c351b3",
@@ -692,6 +700,14 @@
                 "id": "5d3ce4f9-4197-4109-9689-31f4749dd891",
                 "resourcePath": "views\\72dfb318-518b-4f0a-b1f0-4f7db4b9aee5.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "730bbaf0-9dbc-44bb-9e2f-782421387e94",
+            "Value": {
+                "id": "3f71d757-f30e-43c9-aa61-a60c4f7ac72b",
+                "resourcePath": "sprites\\sprMenuBorder\\sprMenuBorder.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1012,6 +1028,14 @@
                 "id": "46e0288e-35da-48cc-a6e6-c40eb4ddac48",
                 "resourcePath": "sprites\\sprMiniSpikeRight\\sprMiniSpikeRight.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a229933a-834d-4d17-93db-f9aa842b985a",
+            "Value": {
+                "id": "c0c13002-edaa-4543-bbc4-7556e05a5123",
+                "resourcePath": "scripts\\scrCreateBorderBlock\\scrCreateBorderBlock.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1527,6 +1551,14 @@
             }
         },
         {
+            "Key": "ed2e7e88-c911-4503-bed3-6886950da6d3",
+            "Value": {
+                "id": "15c4bd64-352e-4855-9f2d-b84d3b8518b1",
+                "resourcePath": "objects\\objBorderBlock\\objBorderBlock.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ed5ec7e0-ce4f-4c84-b8a6-6c709657d07d",
             "Value": {
                 "id": "53498eff-0ed7-4497-a697-47e168ed14db",
@@ -1623,6 +1655,14 @@
             }
         },
         {
+            "Key": "f66bc676-cbb7-4db8-a5e5-94322005fa85",
+            "Value": {
+                "id": "6a7e9918-d7f1-4b09-94ff-d9f3adbf9047",
+                "resourcePath": "scripts\\scrClipboardGetString\\scrClipboardGetString.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f69b4683-c2fb-4948-aaa8-5365e684e4a3",
             "Value": {
                 "id": "e8fdb65f-2ab4-44d3-971e-495af67edba6",
@@ -1665,20 +1705,21 @@
     ],
     "script_order": [
         "1f2d6498-3f9d-45e9-b25f-b5189d4f33e5",
+        "a229933a-834d-4d17-93db-f9aa842b985a",
         "2eda74f8-27be-4ca5-91f6-98be6c63efec",
+        "c5eba9ff-ac8f-452a-8e93-15aa6c9bc3ca",
         "01d06707-ce89-437b-8e2a-85946808f2ab",
         "932e03fa-f915-402e-96fe-6e8b8844edc7",
-        "c5eba9ff-ac8f-452a-8e93-15aa6c9bc3ca",
         "45a38fc1-745a-4e17-b140-d643c26e6977",
         "d1ff1b8b-69fd-40d4-b4bf-85292e72775e",
-        "51a3da53-6e30-42cd-a64d-9ebae05e43af",
-        "8195da0d-99f3-4250-bb60-fae107dc4c5f",
-        "3d839a0e-53d8-48ea-b80b-10594fe37eb4",
-        "83c1c99d-0687-4d20-bbd0-de80e15ffb39",
-        "bb942f79-4a03-4ed6-9a1b-489f205a7047",
         "ade01898-044b-41f2-a0e6-f816cdb94622",
+        "51a3da53-6e30-42cd-a64d-9ebae05e43af",
+        "bb942f79-4a03-4ed6-9a1b-489f205a7047",
+        "8195da0d-99f3-4250-bb60-fae107dc4c5f",
         "e8df04d7-fa54-490a-a58b-7c5f6b21941e",
         "fb0a46b4-e4e1-43b8-9389-f57d62c0aadf",
+        "83c1c99d-0687-4d20-bbd0-de80e15ffb39",
+        "3d839a0e-53d8-48ea-b80b-10594fe37eb4",
         "651e94f5-283d-4d31-8bef-05c98743d918",
         "2e3faebe-fdc4-414c-a4bb-fff39e0b7177",
         "4886a289-a4ce-496e-8153-a607c932d61a",
@@ -1688,6 +1729,8 @@
         "9dc2b74f-aef4-4b01-a9d8-cf577f7d32e5",
         "cd7bfd85-39d4-4041-bc01-ac4540f10d85",
         "e4909bd1-c976-4d2b-9e6f-ba521667ff6e",
+        "f66bc676-cbb7-4db8-a5e5-94322005fa85",
+        "3b15dead-f88f-4ec2-aba7-95120c040dd4",
         "d551aa5d-105e-49e0-b602-ed4dda5daf43",
         "2766cbaa-76d4-4e84-b4ab-e827a7f59ba6",
         "952f485f-c303-4a34-a9d6-e004a60cc5f7",

@@ -110,6 +110,16 @@ if (page == PAGE_PLAYER)
 		// 存档类型
 		global.savetype = !global.savetype;
 	}
+	yy += yb;
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuBorder, "Border: " + (global.bordertype ? "Solid" : "Death")))
+	{
+		// 出屏类型
+		global.bordertype = !global.bordertype;
+		if (global.bordertype == BORDER_SOLID) 
+			scrCreateBorderBlock();
+		else with(objBorderBlock) 
+			instance_destroy();
+	}
 }
 #endregion
 #region 地图
@@ -189,6 +199,6 @@ if (page == PAGE_ABOUT)
 	yy = ys;
 	scrDrawConfig(c_black, 1, fBold, fa_left, fa_top);
 	xx = x;
-	draw_text(xx, yy, "Jtool Mobile \n            v0.90\nBy Cube");
+	draw_text(xx, yy, "Jtool Mobile \n            v0.91\nBy Cube");
 }
 #endregion
