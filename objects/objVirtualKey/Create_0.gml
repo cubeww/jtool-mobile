@@ -5,6 +5,7 @@ enum KEY
 	RIGHT = 1,
 	UP = 2,
 	SHOOT = 3,
-	RESTART = 4
+	RESTART = 4,
+	CANCEL = 5
 }
 key = 0;

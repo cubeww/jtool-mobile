@@ -727,6 +727,14 @@
             }
         },
         {
+            "Key": "768c0de8-b3e2-41a8-8e7d-262e1af4e218",
+            "Value": {
+                "id": "eb189f98-4d53-438a-b9d4-5e13ff2de45c",
+                "resourcePath": "objects\\objPlayerPosition\\objPlayerPosition.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "77d1bfdb-2d54-4bbd-8198-4d13dce6edab",
             "Value": {
                 "id": "96b8f1ce-5545-4590-85bc-2835f1a087ff",
@@ -940,6 +948,14 @@
                 "id": "70ba6061-f6b2-4f9a-bf2c-b7baf0029527",
                 "resourcePath": "views\\93e184b1-c899-4753-9c4b-f4871caa8599.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "944d012c-1add-4e75-b0f4-409ca8c48abb",
+            "Value": {
+                "id": "c4dc1c69-ce8b-4471-86e4-1f1accba7366",
+                "resourcePath": "sprites\\sprVirtualCancel\\sprVirtualCancel.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1287,14 +1303,6 @@
             }
         },
         {
-            "Key": "c710fd35-1d31-4b5d-88c7-6997266333b8",
-            "Value": {
-                "id": "2643c6d2-1999-4371-ac06-5b28e00f977b",
-                "resourcePath": "objects\\objMapName\\objMapName.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "c80df4fd-7697-40fb-bbe8-868f53051bb8",
             "Value": {
                 "id": "1dbed3fa-2895-404e-bd4d-e8ff23359417",
@@ -1556,6 +1564,14 @@
                 "id": "15c4bd64-352e-4855-9f2d-b84d3b8518b1",
                 "resourcePath": "objects\\objBorderBlock\\objBorderBlock.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ed37dc81-544f-4aa4-bcd5-25eca4a6e6f0",
+            "Value": {
+                "id": "0d215b04-5d3c-4b67-921e-7f3767ee6bed",
+                "resourcePath": "sprites\\sprMenuCancel\\sprMenuCancel.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

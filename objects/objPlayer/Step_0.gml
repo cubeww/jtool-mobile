@@ -53,6 +53,16 @@ if (keyboard_check_pressed(global.jumpButton))
 	scrPlayerJump();
 if (keyboard_check_released(global.jumpButton))
 	scrPlayerVJump();
+// 模拟JC
+if (keyboard_check_pressed(global.cancelButton))
+{
+	if (djump)
+	{
+		scrPlayerJump();
+		repeat (global.cancelLevel)
+			scrPlayerVJump();
+	}
+}
 // 爬墙
 var onVineL = distance_to_object(objWalljumpL) <= 1 and place_free(x, y + global.grav);
 var onVineR = distance_to_object(objWalljumpR) <= 1 and place_free(x, y + global.grav);

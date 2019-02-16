@@ -36,7 +36,6 @@ room_speed = 50;						// 正常I Wanna的帧数（50FPS/s）
 global.state = GLOBALSTATE_EDIT;		// 全局模式，防止误触
 display_set_gui_size(1280, 720);		// 设定GUI大小
 // 地图
-global.mapName = "Untitled";			// 地图名字
 global.mapX = objMapArea.x;				// 地图的相对原点位置X
 global.mapY = objMapArea.y;				// 地图的相对原点位置Y
 // 缩放
@@ -65,12 +64,14 @@ global.dotkid = NORMAL_KID;				// 是否为点KID模式
 global.infjump = false;					// 是否为无限跳模式
 global.canDeath = true;					// 是否开启死亡
 global.bordertype = BORDER_DEATH;		// 出屏是否死亡
+global.cancelLevel = 1;					// 模拟JC等级
 // 按键
 global.leftButton = vk_left;
 global.rightButton = vk_right;
 global.jumpButton = vk_shift;
 global.shootButton = ord("Z");
 global.restartButton = ord("R");
+global.cancelButton = ord("X");
 // 杂项
 global.showhitbox = HITBOX_ONLY_PLAYER;	// 碰撞盒显示模式
 global.savetype = SAVETYPE_SHOOT;		// 存档模式

@@ -48,26 +48,20 @@ if (page == PAGE_FILE)
 {
 	yy = ys;
 	scrDrawConfig(c_black, 1, fSettings, fa_left, fa_top);
-	if (scrMenuButton(xx, yy, bw, bh, sprMenuEdit, "Map Name"))
-	{
-		// 地图改名
-		global.mapName = get_string("Map Name", global.mapName);
-	}
-	
-	yy += yb;
 	if (scrMenuButton(xx, yy, bw, bh, sprMenuOpen, "Import Map"))
 	{
 		// 打开地图
-		scrImportMap();
+		if (show_question("Import jmap code from your clipboard?"))
+			scrImportMap();
 	}
 	
 	yy += yb;
 	if (scrMenuButton(xx, yy, bw, bh, sprMenuSave, "Export Map"))
 	{
 		// 保存地图
-		scrExportMap();
+		if (show_question("Export jmap code to your clipboard?"))
+			scrExportMap();
 	}
-
 }
 #endregion 
 #region 玩家
@@ -111,14 +105,12 @@ if (page == PAGE_PLAYER)
 		global.savetype = !global.savetype;
 	}
 	yy += yb;
-	if (scrMenuButton(xx, yy, bw, bh, sprMenuBorder, "Border: " + (global.bordertype ? "Solid" : "Death")))
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuCancel, "Cancel Level: " + string(global.cancelLevel)))
 	{
-		// 出屏类型
-		global.bordertype = !global.bordertype;
-		if (global.bordertype == BORDER_SOLID) 
-			scrCreateBorderBlock();
-		else with(objBorderBlock) 
-			instance_destroy();
+		// 模拟JC
+		var new = get_integer("Jump Cancel Level (1 ~ 10)\nBut 0 can be used for the highest jump", 1);
+		new = clamp(new, 0, new);
+		global.cancelLevel = new;
 	}
 }
 #endregion
@@ -130,7 +122,7 @@ if (page == PAGE_MAP)
 	if (scrMenuButton(xx, yy, bw, bh, sprMenuSnap, "Snap: " + string(global.snapW)))
 	{
 		// 对齐调整
-		var new = get_integer("Snap Size (1 ~ 128)", 0);
+		var new = get_integer("Snap Size (1 ~ 128)", 32);
 		if (new != 0)
 		{
 			new = clamp(new, 1, 128);
@@ -152,7 +144,7 @@ if (page == PAGE_MAP)
 	if (scrMenuButton(xx, yy, bw, bh, sprMenuGrid, "Grid: " + string(global.snapW)))
 	{
 		// 网格调整
-		var new = get_integer("Grid Size (2 ~ 128)", 0);
+		var new = get_integer("Grid Size (2 ~ 128)", 32);
 		if (new != 0)
 		{
 			new = clamp(new, 2, 128);
@@ -168,7 +160,7 @@ if (page == PAGE_MAP)
 	if (scrMenuButton(xx, yy, bw, bh, sprMenuSpeed, "Speed: " + string(room_speed) + " / " + string(fps)))
 	{
 		// 速度调整
-		var new = get_integer("Game Speed (default is 50, 1 ~ 500)", 0);
+		var new = get_integer("Game Speed (default is 50, 1 ~ 500)", 50);
 		if (new != 0)
 		{
 			new = clamp(new, 1, 500);
@@ -176,21 +168,35 @@ if (page == PAGE_MAP)
 		}
 	}
 	yy += yb;
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuBorder, "Border: " + (global.bordertype ? "Solid" : "Death")))
+	{
+		// 出屏类型
+		global.bordertype = !global.bordertype;
+		if (global.bordertype == BORDER_SOLID) 
+			scrCreateBorderBlock();
+		else with(objBorderBlock) 
+			instance_destroy();
+	}
+	yy += yb;
 	if (scrMenuButton(xx, yy, bw, bh, sprMenuMap, "Clear Map"))
 	{
 		// 清空地图
-		with (all) 
+		if (show_question("Clear the map?"))
 		{
-			if (scrIsEditorObject(object_index))
+			with (all) 
 			{
-				instance_destroy();
+				if (scrIsEditorObject(object_index))
+				{
+					instance_destroy();
+				}
+				with (objPlayer)
+					instance_destroy();
+				with (objBlood)
+					instance_destroy();
 			}
-			with (objPlayer)
-				instance_destroy();
-			with (objBlood)
-				instance_destroy();
 		}
 	}
+	
 }
 #endregion
 #region 关于

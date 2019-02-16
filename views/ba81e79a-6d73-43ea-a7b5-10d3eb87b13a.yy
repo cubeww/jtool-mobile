@@ -8,7 +8,8 @@
         "45d9c0a2-c314-4a35-9d63-1ba8bebeab02",
         "2d5463c9-bb10-47fb-9ea2-2172d3a9a176",
         "792888c3-5a9c-4f93-885d-23df8101f328",
-        "8381ca8e-2378-487b-8137-c91ba1984c5e"
+        "8381ca8e-2378-487b-8137-c91ba1984c5e",
+        "944d012c-1add-4e75-b0f4-409ca8c48abb"
     ],
     "filterType": "GMSprite",
     "folderName": "Virtual",

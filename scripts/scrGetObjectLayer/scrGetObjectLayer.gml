@@ -4,9 +4,10 @@
 switch (argument0) 
 {
 	case objWarp:
+		return "Warp";
 	case objGravityUp:
 	case objGravityDown:
-		return "Player";
+		return "GravityArrow";
 	case objBlock: 
 	case objMiniBlock:
 	case objPlatform:

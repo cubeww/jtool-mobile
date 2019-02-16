@@ -3,19 +3,22 @@ var keycode;
 switch (key)
 {
 	case KEY.LEFT:
-		keycode = vk_left;
+		keycode = global.leftButton;
 		break;
 	case KEY.RIGHT:
-		keycode = vk_right;
+		keycode = global.rightButton;
 		break;
 	case KEY.UP:
-		keycode = vk_shift;
+		keycode = global.jumpButton;
 		break;
 	case KEY.SHOOT:
-		keycode = ord("Z");
+		keycode = global.shootButton;
 		break;
 	case KEY.RESTART:
-		keycode = ord("R");
+		keycode = global.restartButton;
+		break;
+	case KEY.CANCEL:
+		keycode = global.cancelButton;
 		break;
 }
 virtual_key_add(x, y, 96, 96, keycode);
