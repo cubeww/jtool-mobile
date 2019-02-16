@@ -51,16 +51,16 @@ if (page == PAGE_FILE)
 	if (scrMenuButton(xx, yy, bw, bh, sprMenuOpen, "Import Map"))
 	{
 		// 打开地图
-		if (show_question("Import jmap code from your clipboard?"))
-			scrImportMap();
+		msg = show_question_async("Import jmap code from your clipboard?");
+		get = "import";
 	}
 	
 	yy += yb;
 	if (scrMenuButton(xx, yy, bw, bh, sprMenuSave, "Export Map"))
 	{
 		// 保存地图
-		if (show_question("Export jmap code to your clipboard?"))
-			scrExportMap();
+		msg = show_question_async("Export jmap code to your clipboard?");
+		get = "export";
 	}
 }
 #endregion 
@@ -108,9 +108,8 @@ if (page == PAGE_PLAYER)
 	if (scrMenuButton(xx, yy, bw, bh, sprMenuCancel, "Cancel Level: " + string(global.cancelLevel)))
 	{
 		// 模拟JC
-		var new = get_integer("Jump Cancel Level (1 ~ 10)\nBut 0 can be used for the highest jump", 1);
-		new = clamp(new, 0, new);
-		global.cancelLevel = new;
+		msg = get_integer_async("Jump Cancel Level (1 ~ 10)\nBut 0 can be used for the highest jump", 1);
+		get = "cancel";
 	}
 }
 #endregion
@@ -122,50 +121,31 @@ if (page == PAGE_MAP)
 	if (scrMenuButton(xx, yy, bw, bh, sprMenuSnap, "Snap: " + string(global.snapW)))
 	{
 		// 对齐调整
-		var new = get_integer("Snap Size (1 ~ 128)", 32);
-		if (new != 0)
-		{
-			new = clamp(new, 1, 128);
-			global.snapW = new;
-			global.snapH = new;
-		}
+		msg = get_integer_async("Snap Size (1 ~ 128)", 32);
+		get = "snap";
 	}
 	yy += yb;
 	if (scrMenuButton(xx, yy, bw, bh, sprMenuOffset, "Offset: (" + string(global.snapX) + ", " + string(global.snapY) + ")"))
 	{
 		// 偏移调整
-		var new = get_integer("Snap X Offset Size (default is 0)", 0);
-		global.snapX = new;
+		msg = get_integer_async("Snap X Offset Size (default is 0)", 0);
+		get = "offsetX";
 		
-		var new = get_integer("Snap Y Offset Size (default is 0)", 0);
-		global.snapY = new;
+		
 	}
 	yy += yb;
-	if (scrMenuButton(xx, yy, bw, bh, sprMenuGrid, "Grid: " + string(global.snapW)))
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuGrid, "Grid: " + string(global.gridW)))
 	{
 		// 网格调整
-		var new = get_integer("Grid Size (2 ~ 128)", 32);
-		if (new != 0)
-		{
-			new = clamp(new, 2, 128);
-			global.gridW = new;
-			global.gridH = new;
-			with (objMapArea)
-			{
-				sprite_assign(spr, scrGetMapSurfaceSprite());
-			}
-		}
+		msg = get_integer_async("Grid Size (2 ~ 128)", 32);
+		get = "grid";
 	}
 	yy += yb;
 	if (scrMenuButton(xx, yy, bw, bh, sprMenuSpeed, "Speed: " + string(room_speed) + " / " + string(fps)))
 	{
 		// 速度调整
-		var new = get_integer("Game Speed (default is 50, 1 ~ 500)", 50);
-		if (new != 0)
-		{
-			new = clamp(new, 1, 500);
-			room_speed = new;
-		}
+		msg = get_integer_async("Game Speed (default is 50, 1 ~ 500)", 50);
+		get = "speed";
 	}
 	yy += yb;
 	if (scrMenuButton(xx, yy, bw, bh, sprMenuBorder, "Border: " + (global.bordertype ? "Solid" : "Death")))
@@ -181,19 +161,16 @@ if (page == PAGE_MAP)
 	if (scrMenuButton(xx, yy, bw, bh, sprMenuMap, "Clear Map"))
 	{
 		// 清空地图
-		if (show_question("Clear the map?"))
+		with (all) 
 		{
-			with (all) 
+			if (scrIsEditorObject(object_index))
 			{
-				if (scrIsEditorObject(object_index))
-				{
-					instance_destroy();
-				}
-				with (objPlayer)
-					instance_destroy();
-				with (objBlood)
-					instance_destroy();
+				instance_destroy();
 			}
+			with (objPlayer)
+				instance_destroy();
+			with (objBlood)
+				instance_destroy();
 		}
 	}
 	

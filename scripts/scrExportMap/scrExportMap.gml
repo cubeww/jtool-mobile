@@ -74,4 +74,4 @@ str += "playersavexscale:" + string(global.savePlayerXscale);
 str += "\n";
 // 设定为剪切板内容以保存
 scrClipboardSetString(str);
-show_message("Successfully export the jmap code to your clipboard");
+show_message_async("Successfully export the jmap code to your clipboard");
