@@ -55,15 +55,17 @@ if (page == PAGE_FILE)
 	}
 	
 	yy += yb;
-	if (scrMenuButton(xx, yy, bw, bh, sprMenuOpen, "Open JMap"))
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuOpen, "Import Map"))
 	{
 		// 打开地图
+		scrImportMap();
 	}
 	
 	yy += yb;
-	if (scrMenuButton(xx, yy, bw, bh, sprMenuSave, "Save JMap"))
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuSave, "Export Map"))
 	{
 		// 保存地图
+		scrExportMap();
 	}
 
 }
@@ -115,7 +117,7 @@ if (page == PAGE_MAP)
 {
 	yy = ys;
 	scrDrawConfig(c_black, 1, fSettings, fa_left, fa_top);
-	if (scrMenuButton(xx, yy, bw, bh, sprMenuDeath, "Snap: " + string(global.snapW)))
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuSnap, "Snap: " + string(global.snapW)))
 	{
 		// 对齐调整
 		var new = get_integer("Snap Size (1 ~ 128)", 0);
@@ -127,23 +129,17 @@ if (page == PAGE_MAP)
 		}
 	}
 	yy += yb;
-	if (scrMenuButton(xx, yy, bw, bh, sprMenuDeath, "Offset: (" + string(global.snapX) + ", " + string(global.snapY) + ")"))
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuOffset, "Offset: (" + string(global.snapX) + ", " + string(global.snapY) + ")"))
 	{
 		// 偏移调整
-		var new = get_integer("Snap Offset Size (default is 0, 0)", 0);
-		if (new != 0)
-		{
-			new = clamp(new, 2, 128);
-			global.gridW = new;
-			global.gridH = new;
-			with (objMapArea)
-			{
-				sprite_assign(spr, scrGetMapSurfaceSprite());
-			}
-		}
+		var new = get_integer("Snap X Offset Size (default is 0)", 0);
+		global.snapX = new;
+		
+		var new = get_integer("Snap Y Offset Size (default is 0)", 0);
+		global.snapY = new;
 	}
 	yy += yb;
-	if (scrMenuButton(xx, yy, bw, bh, sprMenuDeath, "Grid: " + string(global.snapW)))
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuGrid, "Grid: " + string(global.snapW)))
 	{
 		// 网格调整
 		var new = get_integer("Grid Size (2 ~ 128)", 0);
@@ -159,7 +155,7 @@ if (page == PAGE_MAP)
 		}
 	}
 	yy += yb;
-	if (scrMenuButton(xx, yy, bw, bh, sprMenuDeath, "Speed: " + string(room_speed) + " / " + string(fps)))
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuSpeed, "Speed: " + string(room_speed) + " / " + string(fps)))
 	{
 		// 速度调整
 		var new = get_integer("Game Speed (default is 50, 1 ~ 500)", 0);
@@ -170,7 +166,7 @@ if (page == PAGE_MAP)
 		}
 	}
 	yy += yb;
-	if (scrMenuButton(xx, yy, bw, bh, sprMenuInfjump, "Clear Map"))
+	if (scrMenuButton(xx, yy, bw, bh, sprMenuMap, "Clear Map"))
 	{
 		// 清空地图
 		with (all) 
@@ -185,19 +181,6 @@ if (page == PAGE_MAP)
 				instance_destroy();
 		}
 	}
-	yy += yb;
-	if (scrMenuButton(xx, yy, bw, bh, sprMenuHitbox, "Hitbox: " + (global.showhitbox == 0 ? "Player" : (global.showhitbox == 1 ? "Both" : "Hitbox"))))
-	{
-		// 碰撞盒子
-		if (global.showhitbox < 2) global.showhitbox++;
-		else global.showhitbox = 0;
-	}
-	yy += yb;
-	if (scrMenuButton(xx, yy, bw, bh, sprMenuSavetype, "Savetype: " + (global.savetype ? "Touch" : "Shoot")))
-	{
-		// 存档类型
-		global.savetype = !global.savetype;
-	}
 }
 #endregion
 #region 关于
@@ -206,6 +189,6 @@ if (page == PAGE_ABOUT)
 	yy = ys;
 	scrDrawConfig(c_black, 1, fBold, fa_left, fa_top);
 	xx = x;
-	draw_text(xx, yy, "Jtool Mobile \n            v0.15\nBy Cube");
+	draw_text(xx, yy, "Jtool Mobile \n            v0.90\nBy Cube");
 }
 #endregion

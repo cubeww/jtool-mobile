@@ -54,6 +54,7 @@ var p = PAGE_MISC;
 i = 0;
 obj[p, i++] = objWater;
 obj[p, i++] = objWater2;
+obj[p, i++] = objWater3;
 obj[p, i++] = objWalljumpL;
 obj[p, i++] = objWalljumpR;
 obj[p, i++] = objJumpRefresher;

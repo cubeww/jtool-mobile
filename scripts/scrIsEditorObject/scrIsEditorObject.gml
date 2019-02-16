@@ -29,6 +29,7 @@ switch (argument0)
 	
 	case objWater:
 	case objWater2:
+	case objWater3:
 	case objWalljumpL:
 	case objWalljumpR:
 	case objJumpRefresher:

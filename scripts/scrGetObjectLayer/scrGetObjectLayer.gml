@@ -3,8 +3,6 @@
 /// @arg obj
 switch (argument0) 
 {
-	case objSave:
-	case objSaveFlip:
 	case objWarp:
 	case objGravityUp:
 	case objGravityDown:
@@ -27,6 +25,7 @@ switch (argument0)
 		return "Killer";
 	case objWater:
 	case objWater2:
+	case objWater3:
 		return "Water";
 	case objWalljumpL:
 	case objWalljumpR:
@@ -34,6 +33,9 @@ switch (argument0)
 	case objJumpRefresher:
 	case objPlayerStart:
 		return "Misc";
+	case objSave:
+	case objSaveFlip:
+		return "Save";
 		
     default:
         return "Misc";
