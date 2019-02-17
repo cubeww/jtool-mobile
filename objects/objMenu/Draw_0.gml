@@ -51,7 +51,7 @@ if (page == PAGE_FILE)
 	if (scrMenuButton(xx, yy, bw, bh, sprMenuOpen, "Import Map"))
 	{
 		// 打开地图
-		msg = show_question_async("Import jmap code from your clipboard?");
+		msg = get_string_async("Import Jtool Map Code", "");
 		get = "import";
 	}
 	
@@ -59,8 +59,7 @@ if (page == PAGE_FILE)
 	if (scrMenuButton(xx, yy, bw, bh, sprMenuSave, "Export Map"))
 	{
 		// 保存地图
-		msg = show_question_async("Export jmap code to your clipboard?");
-		get = "export";
+		scrExportMap();
 	}
 }
 #endregion 
@@ -182,6 +181,6 @@ if (page == PAGE_ABOUT)
 	yy = ys;
 	scrDrawConfig(c_black, 1, fBold, fa_left, fa_top);
 	xx = x;
-	draw_text(xx, yy, "Jtool Mobile \n            v0.91\nBy Cube");
+	draw_text(xx, yy, "Jtool Mobile \n            v0.93\nBy Cube");
 }
 #endregion

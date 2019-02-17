@@ -1,5 +1,5 @@
 /// @func scrImportMap()
-/// @desc 输出地图到剪切板
+/// @desc 输出地图
 var str = ""; // 最终输出的字符串
 // 第一部分：Jtool地图所需的部分
 // 基本信息
@@ -42,36 +42,38 @@ with (all)
 	}
 }
 // 第二部分：便于人类阅读的部分
-str += "\n";
-str += "\n";
-str += "data repeated below for easy parsing by other tools";
-str += "\n";
-str += "objects: (x, y, type)";
-str += "\n";
-with (all)
+if (os_browser == browser_not_a_browser) // 浏览器换行符有BUG，不让他搞
 {
-	if (scrIsEditorObject(object_index))
+	str += "\n";
+	str += "\n";
+	str += "data repeated below for easy parsing by other tools";
+	str += "\n";
+	str += "objects: (x, y, type)";
+	str += "\n";
+	with (all)
 	{
-		str += string(x - global.mapX) + " " + string(y - global.mapY) + " " + string(objectToSaveID(object_index)) + " ";
+		if (scrIsEditorObject(object_index))
+		{
+			str += string(x - global.mapX) + " " + string(y - global.mapY) + " " + string(objectToSaveID(object_index)) + " ";
+		}
 	}
+	str += "\n";
+	str += "version:" + "1.2.0";
+	str += "\n";
+	str += "infinitejump:" + string(global.infjump);
+	str += "\n";
+	str += "dotkid:" + string(global.dotkid > 0);
+	str += "\n";
+	str += "savetype:" + string(global.savetype);
+	str += "\n";
+	str += "bordertype:" + string(global.bordertype);
+	str += "\n";
+	str += "playersavex:" + string(global.savePlayerX);
+	str += "\n";
+	str += "playersavey:" + string_format(global.savePlayerY, 3, 16);
+	str += "\n";
+	str += "playersavexscale:" + string(global.savePlayerXscale);
+	str += "\n";
 }
-str += "\n";
-str += "version:" + "1.2.0";
-str += "\n";
-str += "infinitejump:" + string(global.infjump);
-str += "\n";
-str += "dotkid:" + string(global.dotkid > 0);
-str += "\n";
-str += "savetype:" + string(global.savetype);
-str += "\n";
-str += "bordertype:" + string(global.bordertype);
-str += "\n";
-str += "playersavex:" + string(global.savePlayerX);
-str += "\n";
-str += "playersavey:" + string_format(global.savePlayerY, 3, 16);
-str += "\n";
-str += "playersavexscale:" + string(global.savePlayerXscale);
-str += "\n";
-// 设定为剪切板内容以保存
-scrClipboardSetString(str);
-show_message_async("Successfully export the jmap code to your clipboard");
+// 弹出对话框以保存
+get_string_async("Jtool Map Code", str);

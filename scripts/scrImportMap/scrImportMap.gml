@@ -1,9 +1,10 @@
-/// @func scrImportMap()
-/// @desc 从剪切板导入地图
-var content = scrClipboardGetString();	// 从剪切板获取地图内容
-if (string_pos("\n", content) != 0)		// 如果获取的地图内容包含换行符
+/// @func scrImportMap(str)
+/// @desc 导入地图
+/// @arg str
+var content = argument0;				// 从字符串获取地图内容
+if (string_pos("data", content) != 0) // 只获取有效的jtool代码
 {
-	content = string_copy(content, 0, string_pos("\n", content)); // 只添加到换行符以前的部分，后面的内容作废
+	content = string_copy(content, 0, string_pos("data", content));
 }
 var index = 1;							// 字符阅读索引
 var delim = "|";						// 分割符

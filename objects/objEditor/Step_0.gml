@@ -7,24 +7,27 @@ if (global.state == GLOBALSTATE_EDIT) // 是否为编辑状态
 		// 检测是否创建实例（单击）
 		if (mouse_check_button_pressed(mb_left)) 
 		{
-			// 开启摆放预览
-			prev = true;
-		}
-		// 检测是否删除实例（双击）
-		if (mouse_check_button_pressed(mb_right))
-		{
-			var list = ds_list_create();
-			collision_point_list(mouse_x, mouse_y, all, false, false, list, false);
-			for (var i = 0; i < ds_list_size(list); i++)
+			if (global.currentObject != -1)
 			{
-				if (scrIsEditorObject(list[| i].object_index))
-				{
-					with (list[|i])
-						instance_destroy();
-					break;
-				}
+				// 开启摆放预览
+				prev = true;
 			}
-			ds_list_destroy(list);
+			else
+			{
+				// 删除模式，删除实例
+				var list = ds_list_create();
+				collision_point_list(mouse_x, mouse_y, all, false, false, list, false);
+				for (var i = 0; i < ds_list_size(list); i++)
+				{
+					if (scrIsEditorObject(list[| i].object_index))
+					{
+						with (list[|i])
+							instance_destroy();
+						break;
+					}
+				}
+				ds_list_destroy(list);
+			}
 		}
 	}
 }
@@ -40,6 +43,8 @@ if (mouse_check_button_released(mb_left) && prev) // 如果松开
 	var inst = instance_create_layer(mx, my, scrGetObjectLayer(obj), obj);
 	with (inst) // 如果放置的是PlayerStart
 	{		
+		scrDestroyIfOutRange(); // 当超出范围时销毁
+		
 		if (object_index == objPlayerStart)
 		{
 			with (objPlayerStart)
@@ -58,7 +63,6 @@ if (mouse_check_button_released(mb_left) && prev) // 如果松开
 		else
 		{
 			scrDestroyIfSame();		// 当完全重合时销毁
-			scrDestroyIfOutRange(); // 当超出范围时销毁
-		}
+		}	
 	}
 }

@@ -44,7 +44,7 @@ global.zoomLevelLast = 1;				// 还原缩放级别
 global.zoomX = objZoomPos.x;			// 缩放位置X
 global.zoomY = objZoomPos.y;			// 缩放位置Y
 // 摆放
-global.currentObject = objPlayerStart;	// 当前选择对象，摆放用
+global.currentObject = -1;				// 当前选择对象，摆放用
 global.snapX = 0;						// 对齐的X偏移
 global.snapY = 0;						// 对齐的Y偏移
 global.snapW = 32;						// 对齐的X距离

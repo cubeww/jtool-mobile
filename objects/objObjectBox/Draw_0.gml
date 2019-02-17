@@ -55,11 +55,11 @@ for (var i = 0, count = 0; i < maxH; i++)
 {
 	for (var j = 0; j < maxW; j++)
 	{
-		if (obj[page, count] != -1) // 该位置存在对象
-		{
-			var dx = xs + j * xb;
-			var dy = ys + i * yb;
-			var dobj = obj[page, count];
+		var dx = xs + j * xb;
+		var dy = ys + i * yb;
+		var dobj = obj[page, count];
+		if (dobj >= 0) // 该位置存在对象
+		{		
 			if (scrObjectButton(dx, dy, ww, hh, object_get_sprite(dobj)))
 			{
 				// 触发按下特效
@@ -70,9 +70,21 @@ for (var i = 0, count = 0; i < maxH; i++)
 				// 切换全局摆放对象
 				global.currentObject = dobj;
 			}
-			count++;
 		}
-		else break;
+		else if (dobj == -1)
+		{
+			if (scrObjectButton(dx, dy, ww, hh, sprMenuDelete))
+			{
+				// 触发按下特效
+				ef2.x = dx;
+				ef2.y = dy;
+				ef2.atPage = page
+				event_user(0);
+				// 切换全局摆放对象
+				global.currentObject = -1;
+			}
+		}
+		count++;
 	}
 }
 

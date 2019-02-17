@@ -7,10 +7,7 @@ if (ID == msg)
 		switch (get)
 		{
 			case "import":
-				scrImportMap();
-				break;
-			case "export":
-				scrExportMap();
+				scrImportMap(ds_map_find_value(async_load, "result"));
 				break;
 			case "cancel":
 				var new = ds_map_find_value(async_load, "value");

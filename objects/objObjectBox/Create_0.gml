@@ -8,12 +8,13 @@ for (var j = 0; j < 4; j++)
 {
 	for (var k = 0; k < 16; k++)
 	{
-		obj[j, k] = -1;
+		obj[j, k] = -2;
 	}
 }
 #region 世界
 var p = PAGE_WORLD;
 i = 0;
+obj[p, i++] = -1;
 obj[p, i++] = objPlayerStart;
 obj[p, i++] = objWarp;
 obj[p, i++] = objSave;
@@ -26,6 +27,7 @@ obj[p, i++] = objGravityDown;
 #region 砖块
 var p = PAGE_BLOCK;
 i = 0;
+obj[p, i++] = -1;
 obj[p, i++] = objBlock;
 obj[p, i++] = objMiniBlock;
 obj[p, i++] = objPlatform;
@@ -36,6 +38,7 @@ obj[p, i++] = objSaveBlocker;
 #region 杀人
 var p = PAGE_KILLER;
 i = 0;
+obj[p, i++] = -1;
 obj[p, i++] = objSpikeUp;
 obj[p, i++] = objSpikeDown;
 obj[p, i++] = objSpikeLeft;
@@ -52,6 +55,7 @@ obj[p, i++] = objKillerBlock;
 #region 其它
 var p = PAGE_MISC;
 i = 0;
+obj[p, i++] = -1;
 obj[p, i++] = objWater;
 obj[p, i++] = objWater2;
 obj[p, i++] = objWater3;

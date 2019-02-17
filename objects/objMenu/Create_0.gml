@@ -3,3 +3,4 @@ page = PAGE_FILE;
 // 按下特效
 ef = instance_create_layer(x, 56, "ButtonEffect", objButtonEffect);
 get = "";
+msg = noone;

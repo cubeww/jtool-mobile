@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "1c39556f-5365-4d07-9ccb-3d53407159fe",
+            "Value": {
+                "id": "59ccf8e0-cf8f-4c40-8738-119a1f2cbaca",
+                "resourcePath": "sprites\\sprMenuDelete\\sprMenuDelete.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1c7a4e1c-7c9b-43b7-a308-85e61d895cdb",
             "Value": {
                 "id": "5cda8243-4578-49c9-a0d6-cf5fff38e0bb",
