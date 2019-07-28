@@ -6,6 +6,7 @@
     "option_xbone_description": "Your Description",
     "option_xbone_display_name": "Made in GameMaker Studio 2",
     "option_xbone_foreground_text": 0,
+    "option_xbone_game_chat_slots": 4,
     "option_xbone_interpolate_pixels": false,
     "option_xbone_languages": "<!-- Add languages you support here -->\\u000a <!-- os_get_language will only return languages listed -->\\u000a <!-- \"en\" is supported by default -->\\u000a <!-- See \"NLS APIs and Localization\" white paper -->\\u000a <!-- from developer.xboxlive.com for info -->",
     "option_xbone_logo_background_colour": {

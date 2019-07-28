@@ -9,6 +9,8 @@ if (mask_index != sprDotkid)
 		draw_sprite_ext(sprite_index, image_index, x, drawY,
 				global.playerXscale, global.grav, image_angle, image_blend, image_alpha);
 	}
+	if (global.grav == -1)
+		drawY += 4; // 修复翻转时判定盒子显示错误
 	if (global.showhitbox == HITBOX_ALL)
 	{
 		draw_sprite_ext(mask_index, 0, x, drawY,

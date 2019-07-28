@@ -407,14 +407,6 @@
             }
         },
         {
-            "Key": "3b15dead-f88f-4ec2-aba7-95120c040dd4",
-            "Value": {
-                "id": "81579ebe-8634-460c-be43-ca499ff5c4d1",
-                "resourcePath": "scripts\\scrClipboardSetString\\scrClipboardSetString.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "3c8f5975-f03b-447c-94b3-3f7c6c7476d2",
             "Value": {
                 "id": "2a5822f4-49c4-4cc6-b94b-e7b7d6c351b3",
@@ -988,14 +980,6 @@
                 "id": "e6552fc9-775b-484e-90ce-f6aa97b559f3",
                 "resourcePath": "sprites\\sprBlock\\sprBlock.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "9782e74e-9fbd-49f8-90fd-e439918d9f91",
-            "Value": {
-                "id": "472f3aea-762d-4e4c-b1a9-76837bef7c16",
-                "resourcePath": "extensions\\Clipboard\\Clipboard.yy",
-                "resourceType": "GMExtension"
             }
         },
         {
@@ -1679,14 +1663,6 @@
             }
         },
         {
-            "Key": "f66bc676-cbb7-4db8-a5e5-94322005fa85",
-            "Value": {
-                "id": "6a7e9918-d7f1-4b09-94ff-d9f3adbf9047",
-                "resourcePath": "scripts\\scrClipboardGetString\\scrClipboardGetString.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "f69b4683-c2fb-4948-aaa8-5365e684e4a3",
             "Value": {
                 "id": "e8fdb65f-2ab4-44d3-971e-495af67edba6",
@@ -1753,8 +1729,6 @@
         "9dc2b74f-aef4-4b01-a9d8-cf577f7d32e5",
         "cd7bfd85-39d4-4041-bc01-ac4540f10d85",
         "e4909bd1-c976-4d2b-9e6f-ba521667ff6e",
-        "f66bc676-cbb7-4db8-a5e5-94322005fa85",
-        "3b15dead-f88f-4ec2-aba7-95120c040dd4",
         "d551aa5d-105e-49e0-b602-ed4dda5daf43",
         "2766cbaa-76d4-4e84-b4ab-e827a7f59ba6",
         "952f485f-c303-4a34-a9d6-e004a60cc5f7",

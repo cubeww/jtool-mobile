@@ -6,3 +6,6 @@ if (image_alpha <= 0)
 {
 	instance_destroy();
 }
+
+// 碰撞优化
+mask_index = noone;

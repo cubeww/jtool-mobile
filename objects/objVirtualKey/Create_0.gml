@@ -9,3 +9,6 @@ enum KEY
 	CANCEL = 5
 }
 key = 0;
+
+// 碰撞优化
+mask_index = noone;

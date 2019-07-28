@@ -75,3 +75,5 @@ global.cancelButton = ord("X");
 // 杂项
 global.showhitbox = HITBOX_ONLY_PLAYER;	// 碰撞盒显示模式
 global.savetype = SAVETYPE_SHOOT;		// 存档模式
+
+randomize();

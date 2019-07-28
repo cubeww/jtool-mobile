@@ -42,38 +42,35 @@ with (all)
 	}
 }
 // 第二部分：便于人类阅读的部分
-if (os_browser == browser_not_a_browser) // 浏览器换行符有BUG，不让他搞
+str += "\n";
+str += "\n";
+str += "data repeated below for easy parsing by other tools";
+str += "\n";
+str += "objects: (x, y, type)";
+str += "\n";
+with (all)
 {
-	str += "\n";
-	str += "\n";
-	str += "data repeated below for easy parsing by other tools";
-	str += "\n";
-	str += "objects: (x, y, type)";
-	str += "\n";
-	with (all)
+	if (scrIsEditorObject(object_index))
 	{
-		if (scrIsEditorObject(object_index))
-		{
-			str += string(x - global.mapX) + " " + string(y - global.mapY) + " " + string(objectToSaveID(object_index)) + " ";
-		}
+		str += string(x - global.mapX) + " " + string(y - global.mapY) + " " + string(objectToSaveID(object_index)) + " ";
 	}
-	str += "\n";
-	str += "version:" + "1.2.0";
-	str += "\n";
-	str += "infinitejump:" + string(global.infjump);
-	str += "\n";
-	str += "dotkid:" + string(global.dotkid > 0);
-	str += "\n";
-	str += "savetype:" + string(global.savetype);
-	str += "\n";
-	str += "bordertype:" + string(global.bordertype);
-	str += "\n";
-	str += "playersavex:" + string(global.savePlayerX);
-	str += "\n";
-	str += "playersavey:" + string_format(global.savePlayerY, 3, 16);
-	str += "\n";
-	str += "playersavexscale:" + string(global.savePlayerXscale);
-	str += "\n";
 }
+str += "\n";
+str += "version:" + "1.2.0";
+str += "\n";
+str += "infinitejump:" + string(global.infjump);
+str += "\n";
+str += "dotkid:" + string(global.dotkid > 0);
+str += "\n";
+str += "savetype:" + string(global.savetype);
+str += "\n";
+str += "bordertype:" + string(global.bordertype);
+str += "\n";
+str += "playersavex:" + string(global.savePlayerX);
+str += "\n";
+str += "playersavey:" + string_format(global.savePlayerY, 3, 16);
+str += "\n";
+str += "playersavexscale:" + string(global.savePlayerXscale);
+str += "\n";
 // 弹出对话框以保存
 get_string_async("Jtool Map Code", str);

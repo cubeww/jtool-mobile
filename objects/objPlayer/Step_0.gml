@@ -56,7 +56,7 @@ if (keyboard_check_released(global.jumpButton))
 // 模拟JC
 if (keyboard_check_pressed(global.cancelButton))
 {
-	if (djump)
+	if (djump || global.infjump)
 	{
 		scrPlayerJump();
 		repeat (global.cancelLevel)

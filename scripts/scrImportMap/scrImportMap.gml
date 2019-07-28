@@ -23,7 +23,7 @@ while (index <= string_length(content) && index)	// 遍历整个字符串的字�
 		// 在第一部分，判断是否为jtool地图
 		if (section_number == 0 && currentstring != "jtool")
 		{
-			show_message_async("Not a valid jtool map."); // 非Jtool地图，报错
+			show_message_async("Not a valid jtool map"); // 非Jtool地图，报错
 			exit;
 		}
 		if (section_number > 1) // 如果大于第一部分

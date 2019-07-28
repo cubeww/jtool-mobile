@@ -181,6 +181,6 @@ if (page == PAGE_ABOUT)
 	yy = ys;
 	scrDrawConfig(c_black, 1, fBold, fa_left, fa_top);
 	xx = x;
-	draw_text(xx, yy, "Jtool Mobile \n            v0.93\nBy Cube");
+	draw_text(xx, yy, "Jtool Mobile \n            v0.94\nBy Cube");
 }
 #endregion
